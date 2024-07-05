@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Google Map Checker",
+  "version": "1.0",
+  "description": "Checks for the presence of a map in Google search results.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon":"icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/search*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
