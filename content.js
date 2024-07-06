@@ -1,9 +1,8 @@
-console.log('content.js loaded');
 function checkForMap() {
-  console.log("checking for map")
+  console.log("Checking for map")
   const mapElement = document.querySelector('.Lx2b0d') || document.querySelector('.Ggdpnf kno-fb-ctx') || document.querySelector('.luibr');
   if (mapElement) {
-    console.log("map found");
+    console.log("Map found");
     mapElement.addEventListener('click', () => {
       const url = window.location.href;
       const location = url.split('q=')[1].split('&')[0];
